@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <title>Contact list App</title>
+</head>
+<body>
+
+<div class="container" ng-controller="AppCtrllogin">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+        <tr>
+            <td><input class="form-control" ng-model="log.name" placeholder="Username"></td>
+            <td><input class="form-control" ng-model="log.pass" placeholder="Password"></td>
+            <td>
+                <button class="btn btn-danger" ng-click="login(log)">Login</button>
+            </td>
+
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <title>Contact list App</title>
+</head>
+<body>
+
+<nav class="navbar navbar-default" style="margin-top: 25px">
+    <div class="container-fluid">
+        <ul class="nav nav-pills nav-justified">
+            <li class="active"><a href="users.html">All Users</a></li>
+            <li><a href="followed.html">Followed</a></li>
+            <li><a href="posts.html">Posts</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container" ng-controller="AppCtrl1">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>number</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- <tr>
+             <td><input class="form-control" ng-model="user.name"s></td>
+             <td><input class="form-control" ng-model="user.email"></td>
+             <td><input class="form-control" ng-model="user.number"></td>
+             <td><button class="btn btn-primary" ng-click="followUser()">Follow User</button></td>
+             <td><button class="btn btn-info" ng-click="unfollowUser()">Unfollow User</button></td>
+         </tr> -->
+
+        <tr ng-repeat="user in AllUser">
+            <td>{{user.u.properties.name}}</td>
+            <td>{{user.u.properties.email}}</td>
+            <td>{{user.u.properties.number}}</td>
+            <td>
+                <button class="btn btn-danger" ng-click="followUser(user.u._id)">Follow User</button>
+            </td>
+
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="controller.js"></script>
+</body>
+</html>
