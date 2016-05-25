@@ -19,9 +19,15 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/Webpage"));
 
 
+<<<<<<< HEAD
 router.get('/showAll/', function (req, res) {
 
     var id = req.body.id;
+=======
+router.get('/showAll:id', function (req, res) {
+
+    var id = req.params.id;
+>>>>>>> origin/master
     console.log("id: ", id);
 
 

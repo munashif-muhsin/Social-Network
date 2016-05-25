@@ -20,9 +20,15 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/Webpage"));
 
 
+<<<<<<< HEAD
 router.get('/showFollowed/', function (req, res) {
 
     var id = req.body.id;
+=======
+router.get('/showFollowed:id', function (req, res) {
+
+    var id = req.params.id;
+>>>>>>> origin/master
     console.log("id: ", id);
 
     db.cypher({
