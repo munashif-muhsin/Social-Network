@@ -20,11 +20,11 @@ app.use(express.static(__dirname + "/Webpage"));
 
 
 
-router.get('/showAll/', function (req, res) {
+router.get('/showAll', function (req, res) {
 
-    var id = req.body.id;
+
+    var id = req.query.id;
     console.log("id: ", id);
-
 
     db.cypher({
 

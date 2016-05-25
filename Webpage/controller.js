@@ -35,7 +35,7 @@ myApp.controller('AppCtrl1', ['$scope', '$http', 'loginService', function ($scop
     var refresh = function () {
         var id = data.UserID;
 
-        $http.get('/showAll', id).success(function (response) {
+        $http.get('/showAll?id='+id).success(function (response) {
             console.log("get all is working!!");
             $scope.AllUser = response;
             console.log(JSON.stringify(response));
@@ -65,7 +65,7 @@ myApp.controller('AppCtrl2', ['$scope', '$http', 'loginService', function ($scop
     var refresh = function () {
         var id = data.UserID;
 
-        $http.get('/showFollowed' , id).success(function (response) {
+        $http.get('/showFollowed?id=' +id).success(function (response) {
 
             console.log("get all is working!!");
             $scope.AllUser = response;
@@ -95,7 +95,7 @@ myApp.controller('AppCtrl3', ['$scope', '$http', 'loginService', '$window', func
 
     var refresh = function () {
         var id = data.UserID;
-        $http.get('/showPosts' , id).success(function (response) {
+        $http.get('/showPosts?id='+id).success(function (response) {
             console.log("get all is working!!");
             $scope.AllPost = response;
             console.log(JSON.stringify(response));

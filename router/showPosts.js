@@ -25,7 +25,7 @@ router.get('/showPosts/', function (req, res) {
 
     console.log(new Date().getTime());
 
-    var id = req.body.id;
+    var id = req.query.id;
 
     console.log("id: ", id);
 

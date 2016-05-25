@@ -23,7 +23,7 @@ app.use(express.static(__dirname + "/Webpage"));
 
 router.get('/showFollowed/', function (req, res) {
 
-    var id = req.body.id;
+    var id = req.query.id;
 
     console.log("id: ", id);
 
