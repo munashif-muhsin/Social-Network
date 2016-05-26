@@ -5,8 +5,7 @@
 var http = require('http');
 var express = require('express');
 var bodyParser= require('body-parser');
-var neo4j = require('neo4j');
-var db = new neo4j.GraphDatabase('http://localhost:7474');
+var db = require('../database');
 var app= express();
 
 app.use(bodyParser.urlencoded({
